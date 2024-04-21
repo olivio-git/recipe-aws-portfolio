@@ -9,7 +9,7 @@ function App() {
           src={reactLogo}
           className="h-32 cursor-pointer filter ease-in-out  animate-bounce drop-shadow-sm decoration-purple-100 "
           alt="React logo"
-          style={{ backgroundColor: 'transparent' }} // Asegúrate de que el fondo sea transparente
+          style={{ backgroundColor: 'transparent' }}
         />
       </div>
       <h1 className="text-4xl font-light animate-pulse text-white mt-8 cursor-pointer">
