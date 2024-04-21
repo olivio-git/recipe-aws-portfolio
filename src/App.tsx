@@ -13,7 +13,7 @@ function App() {
         />
       </div>
       <h1 className="text-4xl font-light animate-pulse text-white mt-8 cursor-pointer">
-        oliviodev.com is being built
+        oliviodev.com is being built!
       </h1>
     </div>
   );
