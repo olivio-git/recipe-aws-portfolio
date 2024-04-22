@@ -53,9 +53,7 @@ export const Home: React.FC = () => {
         /> 
         <perspectiveCamera position={[0,10,2]}  />
         <ModelComponent />
-        <Floor />
-        {/* <Html position={[0, 3, 0]}>Your model here</Html> */}
-        {/* <LightIndicator position={[0, 3, 0]} /> */}
+        <Floor /> 
       </Canvas>
     </div>
  );
