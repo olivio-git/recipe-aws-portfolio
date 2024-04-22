@@ -19,7 +19,6 @@ module.exports = {
           }
           console.log("Complet ",stdout);
           exec("npm install");
-          exec("sudo systemctl reload nginx");
           res.status(200).send("Complet!");
         }); 
       } else {
