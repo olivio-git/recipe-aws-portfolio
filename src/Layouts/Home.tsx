@@ -1,18 +1,10 @@
 import React, { useRef } from 'react';
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
-import { Box, Html, OrbitControls, OrthographicCamera } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { DirectionalLightShadow, Mesh, DirectionalLight, PerspectiveCamera } from 'three';
+import {  Mesh} from 'three';
 
-const LightIndicator: React.FC<{ position: [number, number, number] }> = ({ position }) => {
- return (
-    <mesh position={position}>
-      <sphereGeometry args={[0.2, 32, 32]} />
-      <meshBasicMaterial color="yellow" />
-    </mesh>
- );
-};
-
+  
 const ModelComponent: React.FC = () => {
  const fileUrl = './src/assets/Models/scene.gltf'; // Asegúrate de ajustar la ruta al archivo de tu modelo
  const mesh = useRef<Mesh>(null!);
