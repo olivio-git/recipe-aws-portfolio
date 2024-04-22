@@ -5,7 +5,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import {  Mesh} from 'three'; 
   
 const ModelComponent: React.FC = () => {
- const fileUrl = '../assets/Models/scene.gltf'; // Asegúrate de ajustar la ruta al archivo de tu modelo
+ const fileUrl = '../assets/Models/scene.gltf';
  const fileUrlRep = 'src/assets/Models/scene.gltf';
  const mesh = useRef<Mesh>(null!);
  const gltf = useLoader(GLTFLoader, fileUrl || fileUrlRep);
