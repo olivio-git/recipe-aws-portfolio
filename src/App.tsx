@@ -1,23 +1,16 @@
-import './App.css';
-import reactLogo from './assets/react.svg';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import { Home } from "./Layouts/Home";
 
 function App() {
+  const ProtectedRoute = () => {
+    
+  };
   return (
-    <div className="min-h-screen bg-gradient-to-r from-[#000000] via-[#000000] to-[#434343] flex flex-col items-center justify-center group">
-      <div className="flex justify-center">
-        <img
-          src={reactLogo}
-          className="h-32 cursor-pointer filter ease-in-out  animate-bounce drop-shadow-sm decoration-purple-100 "
-          alt="React logo"
-          style={{ backgroundColor: 'transparent' }}
-        />
-      </div>
-      <h1 className="text-4xl font-light animate-pulse text-white mt-8 cursor-pointer">
-        Oliviodev.com is being built! ...💻
-      </h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />}></Route>
+    </Routes>
   );
- }
- 
- export default App;
- 
+}
+
+export default App;
