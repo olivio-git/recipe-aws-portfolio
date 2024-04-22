@@ -2,11 +2,10 @@ import React, { useRef } from 'react';
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import {  Mesh} from 'three';
-
+import {  Mesh} from 'three'; 
   
 const ModelComponent: React.FC = () => {
- const fileUrl = './Model/scene.gltf'; // Asegúrate de ajustar la ruta al archivo de tu modelo
+ const fileUrl = './src/assets/Models/scene.gltf'; // Asegúrate de ajustar la ruta al archivo de tu modelo
  const mesh = useRef<Mesh>(null!);
  const gltf = useLoader(GLTFLoader, fileUrl);
 
