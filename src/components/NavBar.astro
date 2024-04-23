@@ -1,8 +1,8 @@
 ---
-
+import "./navbar.css";
 ---
 
-<nav class="bg-gray-900">
+<nav class="dark:bg-dark-primary bg-light-primary">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <div class="flex-shrink-0">
@@ -12,11 +12,51 @@
           class="w-14 h-14 rounded-full cursor-pointer"
         />
       </div>
-      <div class="hidden md:block">
+      <div class="md:block">
         <div class="ml-10 flex items-baseline space-x-4">
-          <p class="font-light text-2xl text-white">Olivio Subelza Cabezas<p/>
+          <!-- <p
+            class="font-light text-sm md:text-2xl dark:text-light-primary text-dark-primary">
+            Olivio Subelza Cabezas
+          </p> -->
+          <label class="ui-switch">
+            <input type="checkbox" id="toggleDarkMode" />
+            <div class="slider">
+              <div class="circle"></div>
+            </div>
+          </label>
         </div>
       </div>
     </div>
   </div>
 </nav>
+
+<script>
+  const localstorage = localStorage.getItem("darkMode");
+  if (localstorage) {
+    document.documentElement.classList.remove("dark");
+  } else {
+    document.documentElement.classList.add("dark");
+  }
+  const toggleDarkMode = document.getElementById("toggleDarkMode");
+  if (toggleDarkMode) {
+    toggleDarkMode.addEventListener("click", function () {
+      const isDarkMode = document.documentElement.classList.contains("dark");
+      if (isDarkMode) {
+        document.documentElement.classList.remove("dark");
+        const isDarkModes = document.documentElement.classList.contains("dark");
+        localStorage.setItem("darkMode", "false");
+      } else {
+        document.documentElement.classList.add("dark");
+        const isDarkModes = document.documentElement.classList.contains("dark");
+        console.log(isDarkModes);
+        localStorage.setItem("darkMode", "true");
+      }
+    });
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    const darkMode = localStorage.getItem("darkMode");
+    if (darkMode === "true") {
+      document.documentElement.classList.add("dark");
+    }
+  });
+</script>
